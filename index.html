@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Geheime Einbettung</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Willkommen</h1>
+  <iframe id="myframe"></iframe>
+
+  <script>
+    // Base64 verschlüsselte URL: https://example.com
+    const encoded = 'aHR0cHM6Ly9leGFtcGxlLmNvbQ==';
+    const url = atob(encoded);
+    document.getElementById('myframe').src = url;
+  </script>
+</body>
+</html>
