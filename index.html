@@ -2,8 +2,16 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Geheime Einbettung</title>
+  <title>Geheime Seite</title>
   <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    h1 {
+      padding: 1rem;
+      background-color: #f0f0f0;
+    }
     iframe {
       width: 100%;
       height: 90vh;
@@ -12,13 +20,14 @@
   </style>
 </head>
 <body>
-  <h1>Willkommen</h1>
-  <iframe id="myframe"></iframe>
+  <h1>Versteckter Inhalt</h1>
+
+  <iframe id="myframe" title="Externer Inhalt"></iframe>
 
   <script>
-    // Base64 verschlüsselte URL: https://example.com
-    const encoded = 'aHR0cHM6Ly9leGFtcGxlLmNvbQ==';
-    const url = atob(encoded);
+    // Deine Base64-codierte URL
+    const encoded = 'aHR0cHM6Ly9wcmV2aWV3LS1nb2xkZW4tZ3Jvdy1sYXVuY2hwYWQubG92YWJsZS5hcHAvI3NlcnZpY2Vz';
+    const url = atob(encoded); // Entschlüsseln
     document.getElementById('myframe').src = url;
   </script>
 </body>
